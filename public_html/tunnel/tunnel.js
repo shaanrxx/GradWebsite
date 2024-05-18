@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
      // After the fade-out completes, redirect
      setTimeout(function() {
-      window.location.href = '../index.html';
+      window.location.href = '../home';
   }, 4500); // This timeout matches the duration of the fade-out effect
 }, 6000); // Start the fade-out 5 seconds before the 5-minute mark
 });

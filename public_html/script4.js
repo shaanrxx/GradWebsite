@@ -220,7 +220,7 @@ function scrollToAbout() {
   const aboutSection = document.getElementById('aboutPage');
   if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
-      window.history.replaceState(null, null, 'index.html');
+      window.history.replaceState(null, null, 'home.html');
   }
 }
 
