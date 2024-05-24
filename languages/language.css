@@ -99,20 +99,23 @@ body {
 
 @media only screen and (max-width: 480px) {
   .button-backToAllLanguages {
-      top: 15%;
-      left: 15%;
+      top: 5%;
+      left: 50%;
+      
   }
   
   .language-title {
+    top: 15%;
       font-size: 2rem;
   }
   
   .language-text1 {
-      font-size: 0.1rem;
+      font-size: 0.5rem;
   }
   
   .audio-player {
       width: 95%;
+      top: 80%;
       left: 5%; /* Adjusted left position */
       transform: translateX(0); /* Remove horizontal centering */
   }
