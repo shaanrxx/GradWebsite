@@ -10,12 +10,14 @@ window.onload = () => {
     document.body.style.display = 'block'; // Or whatever display type you want
     const aboutLanguages = document.querySelector('.language-title');
     const aboutLanguage1 = document.querySelector('.language-text1');
+    // const aboutLanguageSharanahua = document.querySelector('.language-text-sharanahua');
     // const aboutText2 = document.querySelector('.about-text2');
     // const aboutText3 = document.querySelector('.about-text3');
     // const aboutButton = document.querySelector('.button-about');
   
     aboutLanguages.style.opacity = 0; // Explicitly set opacity to 0 on DOM load
     aboutLanguage1.style.opacity = 0; // Explicitly set opacity to 0 on DOM load
+    // aboutLanguageSharanahua.style.opacity = 0; // Explicitly set opacity to 0 on DOM load
     // aboutText2.style.opacity = 0; // Explicitly set opacity to 0 on DOM load
     // aboutText3.style.opacity = 0; // Explicitly set opacity to 0 on DOM load
     // aboutButton.style.opacity = 0; // Explicitly set opacity to 0 on DOM load
@@ -40,11 +42,14 @@ window.onload = () => {
       }, delay);
     }
   
+
+    
     // Fade in the title immediately
     fadeInElement(aboutLanguages, 100);
   
     // // Fade in the paragraph text one second later
     fadeInElement(aboutLanguage1, 200);
+
 
     //    // Fade in the paragraph text one second later
     //    fadeInElement(aboutText2, 300);
@@ -83,11 +88,11 @@ window.onload = () => {
 //   }
 
 
-window.onload = function() {
-    if(window.location.hash === '#carousel') {
-        const carouselElement = document.getElementById('carousel');
-        if(carouselElement) {
-            carouselElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-};
+// window.onload = function() {
+//     if(window.location.hash === '#carousel') {
+//         const carouselElement = document.getElementById('carousel');
+//         if(carouselElement) {
+//             carouselElement.scrollIntoView({ behavior: 'smooth' });
+//         }
+//     }
+// };

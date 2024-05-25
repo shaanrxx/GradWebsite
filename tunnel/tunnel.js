@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const tunnel = document.querySelector('.tunnel');
         const tunnelText = document.querySelector('.tunnel-text');
 
-        // Apply fade-out effect by changing opacity over 5 seconds
-        tunnel.style.transition = 'opacity 5s ease';
-        tunnelText.style.transition = 'opacity 5s ease';
+        // Apply fade-out effect by changing opacity over 3 seconds
+        tunnel.style.transition = 'opacity 3s ease';
+        tunnelText.style.transition = 'opacity 3s ease';
         tunnel.style.opacity = '0';
         tunnelText.style.opacity = '0';
   

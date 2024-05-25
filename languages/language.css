@@ -52,7 +52,8 @@ body {
   color: white;
   font-size: 3rem;
   text-align: center;
-  top: 50%;
+  top: 10%;
+  opacity: 100%;
   transform: translateY(-50%);
   animation: fadeUp 1s ease-out forwards;
 }
@@ -64,7 +65,18 @@ body {
   color: white;
   font-size: 1.5rem;
   text-align: center;
-  top: 50%;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.language-text-sharanahua{
+  font-family: 'Roboto', sans-serif;
+  padding: 0 15%;
+  position: relative;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  top: 30%;
   transform: translateY(-50%);
 }
 
@@ -72,7 +84,7 @@ body {
 .audio-player {
   width: 35%;
   position: absolute; 
-  bottom: 10px; 
+  bottom: 10%; 
   left: 50%;
   transform: translateX(-50%);
 }
@@ -108,13 +120,19 @@ body {
   }
   
   .language-title {
-    top: 15%;
+      top: 25%;
       font-size: 2rem;
+      left: 50%;
+      z-index: 100;
   }
   
   .language-text1 {
-    top: 35%;
+      top: 35%;
       font-size: 0.7rem;
+  }
+  .language-text-sharanahua{
+      top: 45%;
+      font-size: 0.6em;
   }
   
   .audio-player {
