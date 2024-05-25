@@ -1,145 +1,102 @@
-/* Default styles */
+html, body {
+    height: 100%; /* Make sure html and body cover full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, rgb(0, 38, 47), #04001b);
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  #aboutLanguage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Add padding to prevent content from touching the edges */
+  }
 
-body {
-  overflow: hidden;
-  font-family: 'Orbitron', sans-serif;
-  z-index: -1;
-  background: linear-gradient(135deg, rgb(0, 38, 47), #04001b);
-  position: relative;
-}
-
-#aboutLanguage {
-  height: 100vh;
-  position: relative; 
-}
-
-.h1 {
-  color: black;
-  font-family: 'Roboto', sans-serif;
-}
-
-.button-backToAllLanguages {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  transform: translate(-50%, -50%);
-  width: auto;
-}
-
-.button-backToAllLanguages button {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-  padding: 10px 20px;
-  z-index: 100;
-  width: 150px;
-  background-color: transparent;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  color: #ffffff; 
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  pointer-events: auto;
-}
-
-.language-title {
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-  top: 10%;
-  opacity: 100%;
-  transform: translateY(-50%);
-  animation: fadeUp 1s ease-out forwards;
-}
-
-.language-text1 {
-  font-family: 'Roboto', sans-serif;
-  padding: 0 15%;
-  position: relative;
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  top: 30%;
-  transform: translateY(-50%);
-}
-
-.language-text-sharanahua{
-  font-family: 'Roboto', sans-serif;
-  padding: 0 15%;
-  position: relative;
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  top: 30%;
-  transform: translateY(-50%);
-}
-
-/* Optional: Add custom CSS to style your audio player */
-.audio-player {
-  width: 35%;
-  position: absolute; 
-  bottom: 10%; 
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Media queries for smaller screens */
-
-@media only screen and (max-width: 768px) {
-  .button-backToAllLanguages {
-      top: 10%;
-      left: 10%;
+  
+  .h1, .language-title {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0; /* Reset margin to help with spacing */
   }
   
   .language-title {
-      font-size: 2.5rem;
+    font-size: 3vw; /* Use viewport width for scaling */
   }
   
-  .language-text1 {
-      font-size: 0.8rem;
-      padding: 0 5%;
+  .language-text1, .language-text-sharanahua {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 0 10%; /* Use percentage for padding */
+    font-size: 2vw; /* Adjust base font size using viewport width */
   }
-  
-  .audio-player {
-      width: 90%;
-  }
-}
 
-@media only screen and (max-width: 480px) {
   .button-backToAllLanguages {
-      top: 5%;
-      left: 50%;
-      max-width: 100%;
-      
+    position: fixed; /* Use fixed to keep it visible */
+    top: 5%;
+    left: 5%;
+    z-index: 100; /* Ensure it's above other content */
   }
   
-  .language-title {
-      top: 25%;
-      font-size: 2rem;
-      left: 50%;
-      z-index: 100;
+  .button-backToAllLanguages button {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+    color: #ffffff;
+    border: 2px solid #ffffff; /* Add border for better visibility */
+    padding: 0.5em 1em; /* Increase padding */
+    border-radius: 5px;
+    font-size: calc(6px + 1vmin); /* Responsive font size */
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
   
-  .language-text1 {
-      top: 35%;
-      font-size: 0.7rem;
+  .button-backToAllLanguages button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
   }
-  .language-text-sharanahua{
-      top: 45%;
-      font-size: 0.6em;
-  }
-  
-  .audio-player {
-      width: 95%;
-      top: 80%;
-      left: 5%; /* Adjusted left position */
-      transform: translateX(0); /* Remove horizontal centering */
-  }
-}
 
+  .audio-player {
+    width: 50%; /* More appropriate width */
+    position: fixed; /* Fixed to ensure it's always accessible */
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
+
+  @media only screen and (max-width: 768px) {
+    .language-title {
+        font-size: 5vw; /* Increase font size slightly for medium devices */
+    }
+    
+    .language-text1, .language-text-sharanahua {
+        font-size: 3.5vw;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    h1, .language-title {
+        font-size: 1.25rem; /* Adjust size on smaller devices */
+      }
+    
+      p, .language-text {
+        font-size: 0.875rem; /* Adjust text size for smaller screens */
+      }
+   
+    
+    .language-text1, .language-text-sharanahua {
+        font-size: 4vw;
+    }
+  
+    .audio-player {
+        width: 95%; /* Maximize width for smaller screens */
+    }
+  }
+  

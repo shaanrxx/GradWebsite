@@ -88,11 +88,11 @@ window.onload = () => {
 //   }
 
 
-// window.onload = function() {
-//     if(window.location.hash === '#carousel') {
-//         const carouselElement = document.getElementById('carousel');
-//         if(carouselElement) {
-//             carouselElement.scrollIntoView({ behavior: 'smooth' });
-//         }
-//     }
-// };
+window.onload = function() {
+    if(window.location.hash === '#carousel') {
+        const carouselElement = document.getElementById('carousel');
+        if(carouselElement) {
+            carouselElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+};
