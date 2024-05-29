@@ -1,102 +1,227 @@
 html, body {
-    height: 100%; /* Make sure html and body cover full height */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-  
-  body {
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(135deg, rgb(0, 38, 47), #04001b);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, rgb(0, 38, 47), #04001b);
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#aboutLanguage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  text-align: justify;
+}
+
+.language-title {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 5vw;
+  margin: 20px 0;
+}
+
+.language-text1 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  padding: 0 5%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.button-backToAllLanguages {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.button-backToAllLanguages button {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: calc(8px + 1vmin);
+  cursor: pointer;
+  max-width: 80%;
+  transition: all 0.3s ease;
+}
+
+.button-backToAllLanguages button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content-sections {
+  display: block; /* Use block display to stack sections */
+}
+
+
+.section-title {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 2vw;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.audio-section, .links-section, .references-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1100px;
+  text-align: justify;
+}
+
+.links-section{
+text-align: center;
+}
+
+.audio-player {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 50%;
+}
+
+.resources-list, .references-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resources-list a, .references-list li {
+  margin: 10px 0;
+}
+
+.resources-list a, .references-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.resources-list a{
+
+color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-block;
+  line-height: 3rem;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px
+}
+
+.resources-list a:hover {
+  color: #646464;
+}
+
+.divider {
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 40px auto; /* Ensure consistent spacing */
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  .button-backToAllLanguages {
+    position: relative;
+    top: 5%;
+    left: 0;
+    transform: none;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
   }
 
-  #aboutLanguage {
+  .button-backToAllLanguages button {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .language-title {
+    font-size: 8vw;
+  }
+
+  .language-text1 {
+    font-size: 4vw;
+    padding: 0 1%;
+  }
+
+  .section-title {
+    font-size: 5vw;
+  }
+
+  .content-sections {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 20px; /* Add padding to prevent content from touching the edges */
   }
 
-  
-  .h1, .language-title {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    text-align: center;
-    margin: 0; /* Reset margin to help with spacing */
-  }
-  
-  .language-title {
-    font-size: 3vw; /* Use viewport width for scaling */
-  }
-  
-  .language-text1, .language-text-sharanahua {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    text-align: center;
-    padding: 0 10%; /* Use percentage for padding */
-    font-size: 2vw; /* Adjust base font size using viewport width */
-  }
-
-  .button-backToAllLanguages {
-    position: fixed; /* Use fixed to keep it visible */
-    top: 5%;
-    left: 5%;
-    z-index: 100; /* Ensure it's above other content */
-  }
-  
-  .button-backToAllLanguages button {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
-    color: #ffffff;
-    border: 2px solid #ffffff; /* Add border for better visibility */
-    padding: 0.5em 1em; /* Increase padding */
-    border-radius: 5px;
-    font-size: calc(6px + 1vmin); /* Responsive font size */
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .button-backToAllLanguages button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+  .audio-section, .links-section, .references-section {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .audio-player {
-    width: 50%; /* More appropriate width */
-    position: fixed; /* Fixed to ensure it's always accessible */
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: 90%;
   }
 
-  
+  .resources-list a {
+    font-size: 4vw;
+  }
 
-  @media only screen and (max-width: 768px) {
-    .language-title {
-        font-size: 5vw; /* Increase font size slightly for medium devices */
-    }
-    
-    .language-text1, .language-text-sharanahua {
-        font-size: 3.5vw;
-    }
+  .divider {
+    width: 90%;
+    margin: 20px auto;
   }
-  
-  @media only screen and (max-width: 480px) {
-    h1, .language-title {
-        font-size: 1.25rem; /* Adjust size on smaller devices */
-      }
-    
-      p, .language-text {
-        font-size: 0.875rem; /* Adjust text size for smaller screens */
-      }
-   
-    
-    .language-text1, .language-text-sharanahua {
-        font-size: 4vw;
-    }
-  
-    .audio-player {
-        width: 95%; /* Maximize width for smaller screens */
-    }
+}
+
+@media only screen and (max-width: 480px) {
+  .language-title {
+    font-size: 10vw;
   }
-  
+
+  .language-text1 {
+    font-size: 5vw;
+    padding: 0 5%;
+    margin-top: 10px;
+  }
+
+  .section-title {
+    font-size: 6vw;
+  }
+
+  .audio-player {
+    max-width: 100%;
+  }
+
+  .resources-list a {
+    font-size: 5vw;
+  }
+
+  .divider {
+    width: 90%;
+    margin: 20px auto;
+  }
+}

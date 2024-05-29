@@ -59,13 +59,13 @@ window.onload = function() {
     fadeInElement(aboutText1, 2000);
 
        // Fade in the paragraph text one second later
-       fadeInElement(aboutText2, 5000);
+       fadeInElement(aboutText2, 3000);
 
           // Fade in the paragraph text one second later
-          fadeInElement(aboutText3, 8000);
+          fadeInElement(aboutText3, 4000);
 
           //  Fade in the paragraph text one second later
-           fadeInElement(aboutButton, 8000);
+           fadeInElement(aboutButton, 4000);
   });
 
 //   window.onload = function() {
