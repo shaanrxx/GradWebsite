@@ -50,15 +50,17 @@ body {
 
 .button-backToAllLanguages button {
   font-family: 'Orbitron', sans-serif;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow */
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: none;
   padding: 0.5em 1em;
   border-radius: 5px;
   font-size: calc(8px + 1vmin);
   cursor: pointer;
   max-width: 80%;
-  transition: all 0.3s ease;
+  pointer-events: auto; /* Ensures the button can be interacted with */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .button-backToAllLanguages button:hover {
