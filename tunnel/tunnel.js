@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
      // After the fade-out completes, redirect
      setTimeout(function() {
       window.location.href = './home#aboutPage.html';
-  }, 4500); // This timeout matches the duration of the fade-out effect
-}, 6000); // Start the fade-out 5 seconds before the 5-minute mark
+  }, 2500); // This timeout matches the duration of the fade-out effect
+}, 4000); // Start the fade-out 4 seconds before the 5-minute mark
 });
