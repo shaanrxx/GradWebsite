@@ -14,6 +14,7 @@
 
 ## Link to Website:
 https://shaanrxx.github.io/GradWebsite/
+
 ![Screenshot 2024-05-31 174213](https://github.com/shaanrxx/GradWebsite/assets/62669918/3d0a379f-f5f9-4ecf-8a5b-d5915b4ea1d1)
 
 
@@ -37,11 +38,12 @@ The interactive elements of the project are optimised for touch gestures due to 
 - **tunnel/**: Houses Blender files and assets used to create the tunnel visualization.
 - **home.html**: The main landing page of the project website.
 - **index.html**: The primary HTML file linking various sections of the project.
+- **language.blend** The most recent updated Blender file. <br>
 - **notes.md**: Documentation and notes regarding the project's development.
 - **script4.js**: JavaScript file used for interactive elements and functionalities.
 - **style.css**: CSS file for styling the website.
 - **video/**: Full Rendered Blender Video Demo.
-- **language.blend** The most recent updated Blender file. <br>
+
 
 ## How to Run
 Clone the repository: <br>
@@ -68,7 +70,9 @@ For more information email me at shaanr@hotmail.co.uk
 
 ## References
 #### Code for the Website:
+https://www.youtube.com/watch?v=9dn9QWr8AUA   <br>
 https://codepen.io/supah/pen/xxJMbbg
+
 #### Blender Tutorials:
 https://www.youtube.com/watch?v=2FRwyhp6tho&t=972s   <br>
 https://www.youtube.com/watch?v=KMN3LkSBETc&t=1671s  <br>
