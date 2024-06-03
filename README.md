@@ -13,13 +13,16 @@
 
 ## Link to Website:
 https://shaanrxx.github.io/GradWebsite/
+![Screenshot 2024-05-31 174213](https://github.com/shaanrxx/GradWebsite/assets/62669918/3d0a379f-f5f9-4ecf-8a5b-d5915b4ea1d1)
+
 
 ## Overview
 Welcome to the repository for "Echoes of the Silenced," a graduation project aimed at raising awareness about endangered languages through an immersive audio-visual installation. This project combines the use of Blender for 3D visualizations and SoundTrap for audio compositions to create a multi-sensory experience that highlights the cultural and linguistic diversity of endangered languages.
 
 The accompanying website extends the project's reach by providing detailed information on each endangered language featured in the installation. Users can explore various sections that include speaker population, cultural significance, and current status. The website also integrates interactive elements, educational content, and resources accessible through a QR code scanned during the Blender video, enhancing the overall immersive experience.
 
-![Project Overview]("C:\Users\shaan\Pictures\Screenshots\Screenshot 2024-05-25 184948.png")
+![Screenshot 2024-05-25 184948](https://github.com/shaanrxx/GradWebsite/assets/62669918/9f9ef9be-4e5c-4334-a86e-340910776815)
+
 
 ## Device Use / Recommendations::
 Best used on mobile and touch screen devices.
