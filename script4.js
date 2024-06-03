@@ -69,7 +69,7 @@ let isDown = false;
 Constants
 --------------------*/
 const speedWheel = 0.02;
-const speedDrag = -0.01;
+const speedDrag = -0.1;
 
 /*--------------------
 Get Z
