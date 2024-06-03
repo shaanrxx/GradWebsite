@@ -37,11 +37,12 @@ The interactive elements of the project are optimised for touch gestures due to 
 - **tunnel/**: Houses Blender files and assets used to create the tunnel visualization.
 - **home.html**: The main landing page of the project website.
 - **index.html**: The primary HTML file linking various sections of the project.
+- **language.blend** The most recent updated Blender file. <br>
 - **notes.md**: Documentation and notes regarding the project's development.
 - **script4.js**: JavaScript file used for interactive elements and functionalities.
 - **style.css**: CSS file for styling the website.
 - **video/**: Full Rendered Blender Video Demo.
-- **language.blend** The most recent updated Blender file. <br>
+
 
 ## How to Run
 Clone the repository: <br>
