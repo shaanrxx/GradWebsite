@@ -60,21 +60,16 @@ document.addEventListener("DOMContentLoaded", function() {
   fadeInElement(aboutButton, 4000);
 });
 
-/*--------------------
-Vars
---------------------*/
 let progress = 10;
 let startX = 0;
 let active = 0;
 let isDown = false;
-let isDragging = false; // To track if dragging is happening
-const DRAG_THRESHOLD = 10;
 
 /*--------------------
 Constants
 --------------------*/
 const speedWheel = 0.02;
-const speedDrag = -0.1;
+const speedDrag = -0.01;
 
 /*--------------------
 Get Z
@@ -90,7 +85,7 @@ const $cursors = document.querySelectorAll('.cursor');
 const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index];
   item.style.setProperty('--zIndex', zIndex);
-  item.style.setProperty('--active', (index - active) / $items.length);
+  item.style.setProperty('--active', (index-active)/$items.length);
 };
 
 /*--------------------
@@ -98,7 +93,8 @@ Animate
 --------------------*/
 const animate = () => {
   progress = Math.max(0, Math.min(progress, 100));
-  active = Math.floor(progress / 100 * ($items.length - 1));
+  active = Math.floor(progress/100*($items.length-1));
+  
   $items.forEach((item, index) => displayItems(item, index, active));
 };
 animate();
@@ -107,12 +103,9 @@ animate();
 Click on Items
 --------------------*/
 $items.forEach((item, i) => {
-  item.addEventListener('click', (e) => {
-    if (!isDragging) {
-      progress = (i / $items.length) * 100 + 10;
-      animate();
-    }
-    e.stopPropagation();
+  item.addEventListener('click', () => {
+    progress = (i/$items.length) * 100 + 10;
+    animate();
   });
 });
 
@@ -126,43 +119,26 @@ const handleWheel = e => {
 };
 
 const handleMouseMove = (e) => {
+  if (e.type === 'mousemove') {
+    $cursors.forEach(($cursor) => {
+      $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  }
   if (!isDown) return;
-
   const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
-
-  const dx = x - startX;
-
-  if (!isDragging && Math.abs(dx) > DRAG_THRESHOLD) {
-    isDragging = true;
-    document.querySelectorAll('.carousel-item').forEach(item => item.classList.add('dragging'));
-  }
-
-  if (isDragging) {
-    const mouseProgress = dx * speedDrag;
-    progress = progress + mouseProgress;
-    startX = x;
-    animate();
-  }
+  const mouseProgress = (x - startX) * speedDrag;
+  progress = progress + mouseProgress;
+  startX = x;
+  animate();
 };
 
 const handleMouseDown = e => {
   isDown = true;
-  isDragging = false;
   startX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
 };
 
-const handleMouseUp = e => {
+const handleMouseUp = () => {
   isDown = false;
-  if (!isDragging) {
-    const x = e.clientX || (e.changedTouches && e.changedTouches[0].clientX) || 0;
-    const y = e.clientY || (e.changedTouches && e.changedTouches[0].clientY) || 0;
-    const clickElement = document.elementFromPoint(x, y);
-    if (clickElement && clickElement.classList.contains('carousel-item')) {
-      clickElement.click();
-    }
-  }
-  isDragging = false;
-  document.querySelectorAll('.carousel-item').forEach(item => item.classList.remove('dragging'));
 };
 
 /*--------------------
@@ -179,20 +155,20 @@ document.addEventListener('touchend', handleMouseUp);
 function goToWheel() {
   const carousel = document.getElementById('carousel');
   if (carousel) {
-    carousel.scrollIntoView({ behavior: 'smooth' });
-    window.history.pushState(null, null, '#carousel');
+      carousel.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, null, '#carousel');
   }
 }
 
 function scrollToAbout() {
   const aboutSection = document.getElementById('aboutPage');
   if (aboutSection) {
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-    window.history.replaceState(null, null, 'home.html#aboutPage');
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      window.history.replaceState(null, null, 'home.html#aboutPage');
   }
 }
 
 document.querySelector('button[onclick="scrollToAbout()"]').addEventListener('click', function(event) {
   console.log("Button clicked");
-  event.stopPropagation();
+  event.stopPropagation(); // Only add if necessary to test if stopping propagation helps
 }, false);
