@@ -183,7 +183,7 @@ button {
   position: relative;
   color: white;
   font-size: 1rem;
-  top: 70%;
+  top: 65%;
   left: -5%; /* Adjust if necessary to position text correctly */
   padding: 0 10%;
   z-index: 10;
@@ -432,7 +432,19 @@ button {
   .button-about button {
     padding: 10px 5%; /* Use percentage for padding to scale with screen size */
     font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
-}
+
+  }
+
+  
+  .carousel-text {
+    width: auto; /* Adjust width for smaller screens */
+    padding: 0 10%; /* Less padding */
+    top: 80%; /* Adjust position */
+  }
+
+  .carousel-line {
+    margin-bottom: 5px; /* Reduce space between lines */
+  }
 
 
 }
