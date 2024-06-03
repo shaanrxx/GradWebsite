@@ -42,7 +42,7 @@ Clone the repository: <br>
 
 `git clone https://github.com/shaanrxx/GradWebsite.git`  <br>
 
-Open index.html in a web browser to view the project.   <br>
+Open `index.html` in a web browser to view the project.   <br>
 
 ## Project Features
 - **Interactive Tunnel**: A visually immersive tunnel created in Blender, representing different endangered languages.
