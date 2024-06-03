@@ -70,6 +70,6 @@ For more information email me at shaanr@hotmail.co.uk
 #### Code for the Website:
 https://codepen.io/supah/pen/xxJMbbg
 #### Blender Tutorials:
-https://www.youtube.com/watch?v=2FRwyhp6tho&t=972s
-https://www.youtube.com/watch?v=KMN3LkSBETc&t=1671s
-https://www.youtube.com/watch?v=2TGwcQGFMdI&t=38s
+https://www.youtube.com/watch?v=2FRwyhp6tho&t=972s   <br>
+https://www.youtube.com/watch?v=KMN3LkSBETc&t=1671s  <br>
+https://www.youtube.com/watch?v=2TGwcQGFMdI&t=38s    <br>
