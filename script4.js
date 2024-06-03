@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
   fadeInElement(aboutText3, 4000);
   fadeInElement(aboutButton, 4000);
 });
-
 let progress = 10;
 let startX = 0;
 let active = 0;
