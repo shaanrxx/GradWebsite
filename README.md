@@ -20,7 +20,7 @@ Welcome to the repository for "Echoes of the Silenced," a graduation project aim
 ## Device Use / Recommendations::
 Best used on mobile and touch screen devices.
 ### Why
-The interactive elements of the project are optimised for touch gestures due to this website being accessed my scanning a QR code during the Blender Video.
+The interactive elements of the project are optimised for touch gestures due to this website being accessed by scanning a QR code during the Blender Video.
 
 ## Project Structure
 audio/: Contains audio files used in the project, including recordings of endangered languages and soundscapes.          <br>
