@@ -10,6 +10,7 @@
 7. [Contributions](#contributions)
 8. [License](#license)
 9. [Contact](#contact)
+10. [References](#references)
 
 ## Link to Website:
 https://shaanrxx.github.io/GradWebsite/
@@ -64,3 +65,11 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ## Contact
 For more information email me at shaanr@hotmail.co.uk
+
+## References
+#### Code for the Website:
+https://codepen.io/supah/pen/xxJMbbg
+#### Blender Tutorials:
+https://www.youtube.com/watch?v=2FRwyhp6tho&t=972s
+https://www.youtube.com/watch?v=KMN3LkSBETc&t=1671s
+https://www.youtube.com/watch?v=2TGwcQGFMdI&t=38s
