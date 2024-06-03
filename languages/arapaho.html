@@ -4,66 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnecting to Google Fonts for performance optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importing Google Fonts: Roboto and Orbitron -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importing Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Language Page</title>
     <title>Document</title>
+    <!-- Linking the external CSS file -->
     <link rel="stylesheet" href="language.css">
     <style>
-
-
+        /* Additional styles can be added here */
     </style>
 </head>
 
 <body>
+    <!-- Button to navigate back to the main language selection page -->
     <div class="button-backToAllLanguages">
-            <button onclick="window.location.href='../home.html#carousel'" aria-label="Back to All Languages">Back To All Languages</button>
-        </div>
-        
-        <div id="aboutLanguage">
-            <h1 class="language-title">Arapaho</h1>
-            <p class="language-text1">
-                The Arapaho language is a member of the Algonquian language family and is spoken by the Arapaho people of the United States, primarily in the states of Wyoming and Oklahoma. It is closely related to other Algonquian languages such as Cheyenne and Blackfoot. Historically, the Arapaho language has played a central role in the cultural and social life of the Arapaho people, serving as a means of communication and preserving their traditions and knowledge. However, like many indigenous languages, it faces the challenge of endangerment due to factors such as language shift and loss of fluent speakers. Efforts are being made by the Arapaho community to revitalize and preserve their language through language programs, education initiatives, and cultural revitalisation efforts.     
-            </p>
-            <hr class="divider">
-           
-            <div class="content-sections">
-                <div class="audio-section">
-                    <h2 class="section-title">Listen to Full Audio</h2>
-                    <audio class="audio-player" controls>
-                        <source src="../audio/forestenets.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <hr class="divider">
-                <div class="links-section">
-                    <h2 class="section-title">Learn More</h2>
-                    <ul class="resources-list">
-                        <li><a href="https://www.elararchive.org/dk0194">Endangered Languages Archive</a></li>
-                        <li><a href="https://verbs.colorado.edu/ArapahoLanguageProject/RMNP/language/language.html">The Arapaho Project</a></li>
-                        <li><a href="https://www.endangeredlanguages.com/lang/661">Endangered Languages Project</a></li>
-                    </ul>
-                </div>
-                <hr class="divider">
+        <button onclick="window.location.href='../home.html#carousel'" aria-label="Back to All Languages">Back To All Languages</button>
+    </div>
 
-                <div class="references-section">
-                    <h2 class="section-title">References</h2>
-                    <ul class="references-list">
-                        <li><a href="resource3.html">To refer to any data from the collection, please cite as follows:
-                            Bracks, Christoph Alexander. 2023. Masep: A collaborative documentation with a special focus on language & music and language & children. Endangered Languages Archive. Handle: http://hdl.handle.net/2196/9539b490-981a-4a6c-bf9b-056143e8c572. Accessed on [insert date here].
-                            
-                            </a></li>
-                    </ul>
-                </div>
+    <!-- Section about the Arapaho language -->
+    <div id="aboutLanguage">
+        <h1 class="language-title">Arapaho</h1>
+        <p class="language-text1">
+            The Arapaho language is a member of the Algonquian language family and is spoken by the Arapaho people of the United States, primarily in the states of Wyoming and Oklahoma. It is closely related to other Algonquian languages such as Cheyenne and Blackfoot. Historically, the Arapaho language has played a central role in the cultural and social life of the Arapaho people, serving as a means of communication and preserving their traditions and knowledge. However, like many indigenous languages, it faces the challenge of endangerment due to factors such as language shift and loss of fluent speakers. Efforts are being made by the Arapaho community to revitalize and preserve their language through language programs, education initiatives, and cultural revitalisation efforts.
+        </p>
+        <hr class="divider">
+
+        <!-- Content sections including audio, links, and references -->
+        <div class="content-sections">
+            <!-- Audio section to listen to the Arapaho language -->
+            <div class="audio-section">
+                <h2 class="section-title">Listen to Full Audio</h2>
+                <audio class="audio-player" controls>
+                    <source src="../audio/forestenets.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
-        
+            <hr class="divider">
+
+            <!-- Links section to learn more about the Arapaho language -->
+            <div class="links-section">
+                <h2 class="section-title">Learn More</h2>
+                <ul class="resources-list">
+                    <li><a href="https://www.elararchive.org/dk0194">Endangered Languages Archive</a></li>
+                    <li><a href="https://verbs.colorado.edu/ArapahoLanguageProject/RMNP/language/language.html">The Arapaho Project</a></li>
+                    <li><a href="https://www.endangeredlanguages.com/lang/661">Endangered Languages Project</a></li>
+                </ul>
+            </div>
+            <hr class="divider">
+
+            <!-- References section for citing sources -->
+            <div class="references-section">
+                <h2 class="section-title">References</h2>
+                <ul class="references-list">
+                    <li><a href="resource3.html">To refer to any data from the collection, please cite as follows:
+                        Bracks, Christoph Alexander. 2023. Masep: A collaborative documentation with a special focus on language & music and language & children. Endangered Languages Archive. Handle: http://hdl.handle.net/2196/9539b490-981a-4a6c-bf9b-056143e8c572. Accessed on [insert date here].
+                    </a></li>
+                </ul>
+            </div>
         </div>
-<script src="language.js"></script>
+    </div>
 
-
-
+    <!-- Linking the external JavaScript file -->
+    <script src="language.js"></script>
 </body>
 </html>

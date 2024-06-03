@@ -1,3 +1,4 @@
+/* Global styles for html and body */
 html, body {
   height: 100%;
   margin: 0;
@@ -7,12 +8,14 @@ html, body {
   font-family: 'Orbitron', sans-serif;
 }
 
+/* Flexbox for body to center content */
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Container for the language information */
 #aboutLanguage {
   display: flex;
   flex-direction: column;
@@ -25,13 +28,19 @@ body {
   text-align: justify;
 }
 
+/* Styling for the language title */
 .language-title {
   font-family: 'Roboto', sans-serif;
   color: white;
   font-size: 5vw;
   margin: 20px 0;
+  text-align: center;
+  word-break: break-word; /* Ensure words break correctly */
+  white-space: normal; /* Allow wrapping */
+  overflow-wrap: anywhere; /* Handle breaking long words */
 }
 
+/* Styling for the language text */
 .language-text1 {
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -41,6 +50,7 @@ body {
   margin-top: 20px;
 }
 
+/* Positioning and styling for the back button */
 .button-backToAllLanguages {
   position: absolute;
   top: 20px;
@@ -67,11 +77,12 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* General styling for content sections */
 .content-sections {
   display: block; /* Use block display to stack sections */
 }
 
-
+/* Styling for section titles */
 .section-title {
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -80,6 +91,7 @@ body {
   text-align: center;
 }
 
+/* Styling for each specific content section */
 .audio-section, .links-section, .references-section {
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -93,10 +105,12 @@ body {
   text-align: justify;
 }
 
-.links-section{
-text-align: center;
+/* Center alignment for links section */
+.links-section {
+  text-align: center;
 }
 
+/* Styling for the audio player */
 .audio-player {
   width: 100%;
   border-radius: 10px;
@@ -104,6 +118,7 @@ text-align: center;
   max-width: 50%;
 }
 
+/* List styling for resources and references */
 .resources-list, .references-list {
   font-family: 'Roboto', sans-serif;
   list-style-type: none;
@@ -122,30 +137,30 @@ text-align: center;
   transition: color 0.3s;
 }
 
-.resources-list a{
-
-color: white;
+/* Additional styling for resource links */
+.resources-list a {
+  color: white;
   text-decoration: none;
   font-size: 1.2rem;
   display: inline-block;
   line-height: 3rem;
   padding: 10px 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 3px
+  border-radius: 3px;
 }
 
 .resources-list a:hover {
   color: #646464;
 }
 
+/* Styling for dividers */
 .divider {
   width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin: 40px auto; /* Ensure consistent spacing */
-
-
 }
 
+/* Responsive styling for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
   .button-backToAllLanguages {
     position: relative;
@@ -153,13 +168,16 @@ color: white;
     left: 0;
     transform: none;
     margin-bottom: 20px;
+    height: 20px;
     text-align: center;
     width: 100%;
+    display: block;
   }
 
   .button-backToAllLanguages button {
     margin: 0 auto;
     display: block;
+    padding: 10px 20px; /* Increased padding for a thicker button */
   }
 
   .language-title {
@@ -201,6 +219,7 @@ color: white;
   }
 }
 
+/* Responsive styling for screens smaller than 480px */
 @media only screen and (max-width: 480px) {
   .language-title {
     font-size: 10vw;

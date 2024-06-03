@@ -1,78 +1,80 @@
+/* Global reset for margin, padding, and box-sizing */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
   }
   
+  /* Styling for the body element */
   body {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #000;
-	overflow: hidden;
+	height: 100vh; /* Full viewport height */
+	display: flex; /* Flexbox layout */
+	align-items: center; /* Center content vertically */
+	justify-content: center; /* Center content horizontally */
+	background-color: #000; /* Black background */
+	overflow: hidden; /* Hide overflow */
   }
   
+  /* Container for the 3D tunnel frames */
   .tunnel {
-	position: relative;
-	width: 100px;
-	height: 100px;
-	transform-style: preserve-3d;
-
+	position: relative; /* Positioned relative to the viewport */
+	width: 100px; /* Width of the tunnel container */
+	height: 100px; /* Height of the tunnel container */
+	transform-style: preserve-3d; /* Preserve 3D transformation for children */
   }
   
+  /* Individual frame styling */
   .frame {
-	width: 100%;
-	height: 100%;
-	border-width: 10px;
-	border-radius: 50%;
-	border-style: solid;
-	border-color: rgb(27, 0, 114);
-	filter: hue-rotate(calc(100deg * var(--i)));
-	position: absolute;
-	transform-style: preserve-3d;
-	animation-name: move;
-	animation-duration: 30s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-delay: calc(1s * var(--i) - 30s);
-  }
-
-
-
-  .tunnel-text {
-	font-family: 'Orbitron', sans-serif;
-	position: absolute;
-	top: 50%; /* Centers vertically */
-	left: 50%; /* Centers horizontally */
-	transform: translate(-50%, -50%) scale(1); /* Center alignment and scale */
-	color: #FFF; /* White color for visibility */
-	font-size: 2em; /* Adjust size as needed */
-	text-align: center;
-	z-index: 100; /* Ensures text is above the frames */
-	animation: textMove 30s linear infinite;
+	width: 100%; /* Full width of the tunnel container */
+	height: 100%; /* Full height of the tunnel container */
+	border-width: 10px; /* Border width */
+	border-radius: 50%; /* Circular frame */
+	border-style: solid; /* Solid border style */
+	border-color: rgb(27, 0, 114); /* Border color */
+	filter: hue-rotate(calc(100deg * var(--i))); /* Hue rotation based on index */
+	position: absolute; /* Absolute positioning within the tunnel container */
+	transform-style: preserve-3d; /* Preserve 3D transformation for children */
+	animation-name: move; /* Animation for frame movement */
+	animation-duration: 30s; /* Duration of the animation */
+	animation-timing-function: linear; /* Linear timing function */
+	animation-iteration-count: infinite; /* Infinite iterations */
+	animation-delay: calc(1s * var(--i) - 30s); /* Delay based on index */
   }
   
+  /* Styling for the tunnel text */
+  .tunnel-text {
+	font-family: 'Orbitron', sans-serif; /* Font family */
+	position: absolute; /* Absolute positioning */
+	top: 50%; /* Center vertically */
+	left: 50%; /* Center horizontally */
+	transform: translate(-50%, -50%) scale(1); /* Center alignment and initial scale */
+	color: #FFF; /* White color for visibility */
+	font-size: 2em; /* Font size */
+	text-align: center; /* Center text alignment */
+	z-index: 100; /* Ensures text is above the frames */
+	animation: textMove 30s linear infinite; /* Animation for text movement */
+  }
+  
+  /* Keyframes for text movement animation */
   @keyframes textMove {
 	0% {
-	  transform: translate(-50%, -50%) scale(0.5); /* Starts normal */
+	  transform: translate(-50%, -50%) scale(0.5); /* Start with smaller scale */
 	}
 	50% {
-	  transform: translate(-50%, -50%) scale(2); /* Grows in the middle */
+	  transform: translate(-50%, -50%) scale(2); /* Grow to larger scale */
 	}
 	100% {
-	  transform: translate(-50%, -50%) scale(3); /* Returns to normal */
+	  transform: translate(-50%, -50%) scale(3); /* End with largest scale */
 	}
   }
   
-
+  /* Keyframes for frame movement animation */
   @keyframes move {
 	from {
-	  transform: perspective(1000px) translateZ(0px) rotate(0deg);
+	  transform: perspective(1000px) translateZ(0px) rotate(0deg); /* Start position */
 	}
 	to {
-	  transform: perspective(1000px) translateZ(1000px) rotate(180deg);
+	  transform: perspective(1000px) translateZ(1000px) rotate(180deg); /* End position */
 	}
   }
-
   

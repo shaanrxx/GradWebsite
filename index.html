@@ -4,17 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importing Google Fonts: Orbitron -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
   <title>CSS 3D Tunnel</title>
+  <!-- Linking the external CSS file for the 3D tunnel -->
   <link rel="stylesheet" href="./tunnel/tunnel.css">
 </head>
 
 <body>
-
-	<div class="tunnel-text">ECHOES OF THE SILENCED</div>
+  <!-- Displaying the main text inside the tunnel -->
+  <div class="tunnel-text">ECHOES OF THE SILENCED</div>
+  
+  <!-- Container for the 3D tunnel frames -->
   <div class="tunnel">
-	
-
+    <!-- Creating multiple frames for the tunnel effect using CSS variables for individual frame styles -->
     <div class="frame" style="--i:1"></div>
     <div class="frame" style="--i:2"></div>
     <div class="frame" style="--i:3"></div>
@@ -45,9 +48,9 @@
     <div class="frame" style="--i:28"></div>
     <div class="frame" style="--i:29"></div>
     <div class="frame" style="--i:30"></div>
-
   </div>
 
+  <!-- Linking the external JavaScript file for the 3D tunnel effect -->
   <script src="./tunnel/tunnel.js"></script>
 
 </body>
