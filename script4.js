@@ -59,10 +59,16 @@ document.addEventListener("DOMContentLoaded", function() {
   fadeInElement(aboutText3, 4000);
   fadeInElement(aboutButton, 4000);
 });
+/*--------------------
+Vars
+--------------------*/
 let progress = 10;
 let startX = 0;
 let active = 0;
 let isDown = false;
+let isDragging = false; // To track if dragging is happening
+const DRAG_THRESHOLD = 10; // Adjusted threshold
+const keyNavigationSpeed = 10; // Speed for key navigation
 
 /*--------------------
 Constants
@@ -84,7 +90,7 @@ const $cursors = document.querySelectorAll('.cursor');
 const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index];
   item.style.setProperty('--zIndex', zIndex);
-  item.style.setProperty('--active', (index-active)/$items.length);
+  item.style.setProperty('--active', (index - active) / $items.length);
 };
 
 /*--------------------
@@ -92,8 +98,7 @@ Animate
 --------------------*/
 const animate = () => {
   progress = Math.max(0, Math.min(progress, 100));
-  active = Math.floor(progress/100*($items.length-1));
-  
+  active = Math.floor(progress / 100 * ($items.length - 1));
   $items.forEach((item, index) => displayItems(item, index, active));
 };
 animate();
@@ -103,7 +108,7 @@ Click on Items
 --------------------*/
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
-    progress = (i/$items.length) * 100 + 10;
+    progress = (i / $items.length) * 100 + 10;
     animate();
   });
 });
@@ -125,19 +130,51 @@ const handleMouseMove = (e) => {
   }
   if (!isDown) return;
   const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
-  const mouseProgress = (x - startX) * speedDrag;
-  progress = progress + mouseProgress;
-  startX = x;
-  animate();
+  const dx = x - startX;
+
+  if (!isDragging && Math.abs(dx) > DRAG_THRESHOLD) {
+    isDragging = true;
+    document.querySelectorAll('.carousel-item').forEach(item => item.classList.add('dragging'));
+    console.log('Dragging started');
+  }
+
+  if (isDragging) {
+    const mouseProgress = dx * speedDrag;
+    progress = progress + mouseProgress;
+    startX = x;
+    animate();
+    console.log('Dragging in progress');
+    console.log('Updated progress:', progress);
+  }
 };
 
 const handleMouseDown = e => {
   isDown = true;
+  isDragging = false;
   startX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+  console.log('Mouse down:', startX);
 };
 
 const handleMouseUp = () => {
   isDown = false;
+  if (isDragging) {
+    isDragging = false;
+    document.querySelectorAll('.carousel-item').forEach(item => item.classList.remove('dragging'));
+    console.log('Dragging stopped');
+  }
+};
+
+/*--------------------
+Key Handlers
+--------------------*/
+const handleKeyDown = (e) => {
+  if (e.key === 'ArrowRight') {
+    progress = Math.min(progress + keyNavigationSpeed, 100);
+    animate();
+  } else if (e.key === 'ArrowLeft') {
+    progress = Math.max(progress - keyNavigationSpeed, 0);
+    animate();
+  }
 };
 
 /*--------------------
@@ -150,20 +187,21 @@ document.addEventListener('mouseup', handleMouseUp);
 document.addEventListener('touchstart', handleMouseDown);
 document.addEventListener('touchmove', handleMouseMove);
 document.addEventListener('touchend', handleMouseUp);
+document.addEventListener('keydown', handleKeyDown);
 
 function goToWheel() {
   const carousel = document.getElementById('carousel');
   if (carousel) {
-      carousel.scrollIntoView({ behavior: 'smooth' });
-      window.history.pushState(null, null, '#carousel');
+    carousel.scrollIntoView({ behavior: 'smooth' });
+    window.history.pushState(null, null, '#carousel');
   }
 }
 
 function scrollToAbout() {
   const aboutSection = document.getElementById('aboutPage');
   if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-      window.history.replaceState(null, null, 'home.html#aboutPage');
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
+    window.history.replaceState(null, null, 'home.html#aboutPage');
   }
 }
 
