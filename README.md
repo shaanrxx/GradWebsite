@@ -19,6 +19,8 @@ Welcome to the repository for "Echoes of the Silenced," a graduation project aim
 
 The accompanying website extends the project's reach by providing detailed information on each endangered language featured in the installation. Users can explore various sections that include speaker population, cultural significance, and current status. The website also integrates interactive elements, educational content, and resources accessible through a QR code scanned during the Blender video, enhancing the overall immersive experience.
 
+![Project Overview]("C:\Users\shaan\Pictures\Screenshots\Screenshot 2024-05-25 184948.png")
+
 ## Device Use / Recommendations::
 Best used on mobile and touch screen devices.
 ### Why
