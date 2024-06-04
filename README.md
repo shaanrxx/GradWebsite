@@ -28,7 +28,7 @@ The accompanying website extends the project's reach by providing detailed infor
 
 ## Device Use / Recommendations::
 Mobile/touch screen  and desktop friendly.
-### Why
+#### Why
 The interactive elements of the project are optimised for touch gestures due to this website being accessed by scanning a QR code during the Blender video. However, this website also works on larger devices.
 
 ## Project Structure
