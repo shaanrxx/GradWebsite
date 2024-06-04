@@ -27,9 +27,9 @@ The accompanying website extends the project's reach by providing detailed infor
 
 
 ## Device Use / Recommendations::
-Best used on mobile and touch screen devices.
+Mobile/touch screen  and desktop friendly.
 ### Why
-The interactive elements of the project are optimised for touch gestures due to this website being accessed by scanning a QR code during the Blender Video.
+The interactive elements of the project are optimised for touch gestures due to this website being accessed by scanning a QR code during the Blender video. However, this website also works on larger devices.
 
 ## Project Structure
 - **audio/**: Contains audio files used in the project, including recordings of endangered languages and soundscapes.
