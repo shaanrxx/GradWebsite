@@ -42,8 +42,6 @@ The interactive elements of the project are optimised for touch gestures due to 
 - **notes.md**: Documentation and notes regarding the project's development.
 - **script4.js**: JavaScript file used for interactive elements and functionalities.
 - **style.css**: CSS file for styling the website.
-- **video/**: Full Rendered Blender Video Demo.
-
 
 ## How to Run
 Clone the repository: <br>
